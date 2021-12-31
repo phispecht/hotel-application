@@ -7,27 +7,52 @@
       <div class="row mb-2">
         <div class="col">
           <label class="form-label">ID</label>
-          <input class="form-control" />
+          <input
+            [(ngModel)]="booking.id"
+            name="Id"
+            type="number"
+            class="form-control"
+          />
         </div>
         <div class="col">
           <label class="form-label">Roomnumber</label>
-          <input class="form-control" />
+          <input
+            [(ngModel)]="booking.roomNumber"
+            name="roomNumber"
+            type="number"
+            class="form-control"
+          />
         </div>
       </div>
       <div class="row mb-2">
         <div class="col-6">
           <label class="form-label">Guest Name</label>
-          <input class="form-control" />
+          <input
+            [(ngModel)]="booking.name"
+            name="name"
+            type="text"
+            class="form-control"
+          />
         </div>
       </div>
       <div class="row">
         <div class="col">
           <label class="form-label">Start Date</label>
-          <input class="form-control" />
+          <input
+            [(ngModel)]="booking.startDate"
+            name="startDate"
+            type="date"
+            class="form-control"
+          />
         </div>
         <div class="col">
           <label class="form-label">End Date</label>
-          <input class="form-control" />
+          <input
+            [(ngModel)]="booking.endDate"
+            name="endDate"
+            type="date"
+            class="form-control"
+          />
         </div>
       </div>
     </form>
