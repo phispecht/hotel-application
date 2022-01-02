@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Booking } from '../booking';
 import { Bookings } from '../mock-bookings';
 
 @Component({
@@ -12,4 +13,9 @@ export class BookingsComponent implements OnInit {
   bookings = Bookings;
 
   ngOnInit(): void {}
+
+  deleteBooking(booking: Booking): void {
+    var index = Bookings.indexOf(booking);
+    this.bookings.splice(index, 1);
+  }
 }

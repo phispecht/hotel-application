@@ -39,8 +39,8 @@
         <div class="col">
           <label class="form-label">Start Date</label>
           <input
-            [(ngModel)]="booking.startDate"
-            name="startDate"
+            [value]="booking.startDate | date: 'yyyy-MM-dd'"
+            (input)="dateChanged($event, true)"
             type="date"
             class="form-control"
           />
@@ -48,8 +48,8 @@
         <div class="col">
           <label class="form-label">End Date</label>
           <input
-            [(ngModel)]="booking.endDate"
-            name="endDate"
+            [value]="booking.endDate | date: 'yyyy-MM-dd'"
+            (input)="dateChanged($event, false)"
             type="date"
             class="form-control"
           />
@@ -58,6 +58,6 @@
     </form>
   </div>
   <div class="card-footer">
-    <button class="btn btn-primary">Submit</button>
+    <button (click)="save()" class="btn btn-primary">Submit</button>
   </div>
 </div>
